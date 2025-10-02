@@ -13,6 +13,8 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: var(--c-bg);
     color: var(--c-text-dark);
+    overflow-x: hidden; 
+    width: 100%;
 }
 
 /* === ANIMASI & EFEK BARU === */
@@ -332,5 +334,11 @@ table tfoot {
     /* Make "Undangan" and "Dokumentasi" grids single column */
     #undangan .grid, #dokumentasi .grid {
         grid-template-columns: 1fr;
+        width: 100%; 
+    }
+
+    .gallery-figure .gallery-item {
+        max-width: 100%;
+        height: auto;
     }
 }
