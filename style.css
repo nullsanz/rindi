@@ -13,8 +13,8 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: var(--c-bg);
     color: var(--c-text-dark);
+    /* PERBAIKAN UTAMA: Mencegah scroll horizontal pada mobile */
     overflow-x: hidden; 
-    width: 100%;
 }
 
 /* === ANIMASI & EFEK BARU === */
@@ -23,6 +23,16 @@ body {
 .hero-overlay {
     background-color: rgba(139, 203, 200, 0.7); /* Bora Bora dengan transparansi */
 }
+
+/* KODE BARU: Styling untuk judul hero yang dipindahkan dari HTML */
+.hero-title {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    word-wrap: break-word; /* Membantu pemotongan kata jika terlalu panjang */
+}
+.hero-subtitle {
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
 
 /* Menghilangkan animasi gradien */
 @keyframes gradientBG {
@@ -334,11 +344,12 @@ table tfoot {
     /* Make "Undangan" and "Dokumentasi" grids single column */
     #undangan .grid, #dokumentasi .grid {
         grid-template-columns: 1fr;
-        width: 100%; 
     }
+}
 
-    .gallery-figure .gallery-item {
-        max-width: 100%;
-        height: auto;
+/* KODE BARU: Penyesuaian untuk layar yang sangat kecil (< 380px) */
+@media (max-width: 380px) {
+    #hero h1 {
+        font-size: 1.75rem; /* 28px */
     }
 }
