@@ -1,0 +1,274 @@
+/* Palet warna dengan tema hijau */
+:root {
+    --c-primary: #8BCBC8;      /* Bora Bora - Hijau Teal */
+    --c-secondary: #A2E4B8;     /* Hijau Mint */
+    --c-accent: #3CB371;       /* Hijau Laut Sedang */
+    --c-bg: #DAE9E4;           /* Icing - Latar belakang hijau sangat muda */
+    --c-text-dark: #2F4F4F;     /* Abu-abu Slate Tua (nuansa hijau) */
+    --c-text-light: #597474;    /* Turunan dari Abu-abu Slate */
+    --c-bg-section: #ffffff;   /* Putih */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--c-bg);
+    color: var(--c-text-dark);
+}
+
+/* === ANIMASI & EFEK BARU === */
+
+/* Latar belakang hero dengan warna solid (tanpa gradasi) */
+.hero-overlay {
+    background-color: rgba(139, 203, 200, 0.7); /* Bora Bora dengan transparansi */
+}
+
+/* Menghilangkan animasi gradien */
+@keyframes gradientBG {
+	from { background-color: rgba(139, 203, 200, 0.7); }
+    to { background-color: rgba(139, 203, 200, 0.7); }
+}
+
+/* Garis bawah judul dengan warna solid */
+.title-underline {
+    width: 0;
+    transition: width 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.fade-in-section.is-visible .title-underline {
+    width: 6rem; /* 96px */
+    background: var(--c-secondary);
+}
+
+.section-title {
+    letter-spacing: -0.025em;
+    color: var(--c-text-dark);
+}
+
+/* Efek Glow pada Kartu dengan warna solid */
+.card-wrapper {
+    position: relative;
+}
+.card-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 0.875rem; /* rounded-xl + sedikit padding */
+    padding: 2px;
+    background: var(--c-primary);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.card-wrapper:hover::before {
+    opacity: 1;
+}
+
+/* Efek hover untuk kartu */
+.card {
+    background-color: var(--c-bg-section);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover { 
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(47, 79, 79, 0.1), 0 8px 10px -6px rgba(47, 79, 79, 0.1);
+}
+.card h3 {
+    color: var(--c-primary);
+}
+
+/* Ikon di dalam kartu tujuan */
+.card ul svg {
+    color: var(--c-primary);
+}
+
+
+/* Efek hover zoom pada galeri */
+.gallery-figure {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 0.5rem; /* rounded-lg */ 
+    background-color: var(--c-accent); /* Diubah menjadi Hijau Laut Sedang */
+    box-shadow: 0 4px 6px -1px rgba(47, 79, 79, 0.1), 0 2px 4px -2px rgba(47, 79, 79, 0.1);
+}
+.gallery-figure .gallery-item {
+    padding: 0.5rem; /* Beri sedikit padding agar background terlihat */
+    flex-grow: 1;
+    transition: transform 0.4s ease-out, filter 0.4s ease-out;
+}
+.gallery-figure:hover .gallery-item {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+}
+
+/* Efek Hover Ikon Zoom pada Galeri */
+.gallery-figure::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M21 21l-5.197-5.197m0 0A7.5 7.5' 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z' /%3E%3C/svg%3E");
+    background-size: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.gallery-figure:hover::after {
+    opacity: 1;
+}
+
+/* Keterangan untuk gambar di galeri */
+.gallery-caption {
+    text-align: center;
+    padding: 0.75rem; /* 12px */
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    color: var(--c-text-light);
+    background-color: var(--c-bg); /* Diubah agar serasi */
+}
+
+/* Animasi Staggered (Bertingkat) */
+.stagger-children > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in-section.is-visible .stagger-children > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pola Latar Belakang Halus */
+.bg-pattern {
+    background-color: var(--c-bg-section);
+    background-image: radial-gradient(var(--c-bg) 1px, transparent 1px);
+    background-size: 16px 16px;
+}
+
+/* Background Blob */
+.bg-blob {
+    animation: blob-spin 20s linear infinite;
+}
+@keyframes blob-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* Indikator Scroll Down */
+.scroll-down-arrow {
+    display: block;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19.5 5.25l-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* === GAYA YANG SUDAH ADA (DIPERBAIKI) === */
+
+/* Animasi fade-in saat scroll */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efek garis bawah pada navigasi */
+.nav-link {
+    position: relative;
+    transition: color 0.3s;
+    color: var(--c-text-dark);
+}
+.nav-link:hover {
+    color: var(--c-primary);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--c-primary);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+.nav-link.active {
+    color: var(--c-primary);
+}
+
+/* Styling untuk tab aktif */
+.tab-btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.tab-btn.active {
+    background: var(--c-primary);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(47, 79, 79, 0.1), 0 2px 4px -2px rgba(47, 79, 79, 0.1);
+}
+
+/* Penyempurnaan Tabel */
+.tab-content table thead { /* Aturan dibuat lebih spesifik */
+    background-color: var(--c-primary);
+    color: white;
+}
+table tbody tr {
+    transition: background-color 0.2s ease;
+}
+table tbody tr:hover {
+    background-color: var(--c-bg);
+}
+table tfoot {
+    background-color: #f3f4f6; /* gray-100 */
+}
+
+
+/* Styling untuk modal galeri */
+.modal {
+    transition: opacity 0.3s ease;
+}
+
+.modal.opacity-0 #modal-img {
+    transform: scale(0.9);
+}
+
+.modal:not(.opacity-0) #modal-img {
+    transform: scale(1);
+}
+
+.modal #modal-img {
+    max-height: 90vh;
+}
+
+/* Transisi untuk konten tab */
+.tab-content {
+    transition: opacity 0.4s ease-in-out;
+}
+
+.tab-content.hiding {
+    opacity: 0;
+    position: absolute; /* Mencegah layout shift saat transisi */
+    pointer-events: none;
+}
+
