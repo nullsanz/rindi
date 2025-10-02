@@ -9,17 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Tautan ke file CSS eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="text-gray-800">
 
-    <!-- Preloader -->
     <div id="preloader" class="fixed inset-0 bg-slate-50 z-[100] flex justify-center items-center transition-opacity duration-500">
         <div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
     </div>
 
-    <!-- Header & Navigasi -->
     <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
@@ -37,7 +34,6 @@
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="#pendahuluan" class="block py-2 text-gray-600 hover:text-blue-500">Pendahuluan</a>
             <a href="#pelaksanaan" class="block py-2 text-gray-600 hover:text-blue-500">Pelaksanaan</a>
@@ -49,24 +45,21 @@
     </header>
 
     <main>
-        <!-- Bagian Hero -->
         <section id="hero" class="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-white text-center bg-gray-800">
             <div class="hero-overlay absolute inset-0"></div>
-            <div class="relative z-10 p-2 sm:p-6 fade-in-section is-visible">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 tracking-normal sm:tracking-wide break-words" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">LAPORAN PERTANGGUNGJAWABAN</h1>
-                <p class="text-lg sm:text-xl md:text-2xl font-semibold mb-6" style="text-shadow: 1px 1px 6px rgba(0,0,0,0.7);">Program Community Development (PCD) Sukarara 2025</p>
+            <div class="relative z-10 p-6 fade-in-section is-visible">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 tracking-wide max-w-full hero-title">LAPORAN PERTANGGUNGJAWABAN</h1>
+                <p class="text-lg sm:text-xl md:text-2xl font-semibold mb-6 hero-subtitle">Program Community Development (PCD) Sukarara 2025</p>
                 <div class="bg-white/20 backdrop-blur-sm rounded-lg inline-block p-4 mt-4">
                     <p class="font-bold text-lg">RIEN DIANI, C.PS</p>
                     <p class="font-medium">STAI AL MUSADDADIYAH GARUT</p>
                 </div>
             </div>
-            <!-- Scroll Down Indicator -->
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
                 <a href="#pendahuluan" class="scroll-down-arrow w-8 h-8 text-white/70 hover:text-white transition-colors duration-300" aria-label="Scroll to next section"></a>
             </div>
         </section>
         
-        <!-- Bagian Pendahuluan -->
         <section id="pendahuluan" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 fade-in-section">
@@ -117,7 +110,6 @@
             </div>
         </section>
 
-        <!-- Bagian Poster Undangan -->
         <section id="undangan" class="py-20 bg-slate-50 bg-pattern">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 fade-in-section">
@@ -149,7 +141,6 @@
             </div>
         </section>
 
-        <!-- Bagian Pelaksanaan Program -->
         <section id="pelaksanaan" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 fade-in-section">
@@ -157,7 +148,6 @@
                     <div class="title-underline mt-4 h-1.5 mx-auto rounded-full" style="background-color: var(--accent);"></div>
                 </div>
                 
-                <!-- Tabs untuk Rincian Program -->
                 <div class="w-full max-w-4xl mx-auto fade-in-section">
                     <div class="flex flex-col sm:flex-row sm:justify-center mb-8 bg-slate-200 rounded-full p-1.5 shadow-inner space-y-2 sm:space-y-0">
                         <button class="tab-btn active flex-1 py-3 px-4 rounded-full font-semibold transition-all duration-300" data-tab="comdev">Community Dev.</button>
@@ -166,7 +156,6 @@
                     </div>
 
                     <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg transition-all duration-500">
-                        <!-- Konten Tab Comdev --> 
                         <div id="comdev" class="tab-content">
                             <h3 class="flex items-center justify-center text-2xl font-bold mb-6 text-center" style="color: var(--primary);">
                                 <svg class="w-7 h-7 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.124-1.28-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.124-1.28.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
@@ -211,7 +200,6 @@
                                 </table>
                             </div>
                         </div>
-                        <!-- Konten Tab PHC -->
                         <div id="phc" class="tab-content hidden">
                            <h3 class="flex items-center justify-center text-2xl font-bold mb-6 text-center" style="color: var(--primary);">
                                 <svg class="w-7 h-7 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
@@ -256,7 +244,6 @@
                                 </table>
                             </div>
                         </div>
-                        <!-- Konten Tab Medcom -->
                         <div id="medcom" class="tab-content hidden">
                             <h3 class="flex items-center justify-center text-2xl font-bold mb-6 text-center" style="color: var(--primary);">
                                 <svg class="w-7 h-7 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
@@ -273,11 +260,11 @@
                                     <tbody class="stagger-children">
                                         <tr class="bg-white border-b">
                                             <td class="px-6 py-4 font-medium">Pembuatan Website Profile Desa</td>
-                                            <td class="px-6 py-4">Sebelum - Selesai Acara</td>
+                                            <td class="px-6 py-4">Sebelum Pemberangkatan - Selesai</td>
                                         </tr>
                                         <tr class="bg-white border-b">
                                             <td class="px-6 py-4 font-medium">Pembuatan Berita</td>
-                                            <td class="px-6 py-4">Sebelum - Setelah Acara</td>
+                                            <td class="px-6 py-4">Sebelum Program - Setelah Selesai Program</td>
                                         </tr>
                                         <tr class="bg-white border-b">
                                             <td class="px-6 py-4 font-medium">Pembuatan Video Dokumenter</td>
@@ -296,13 +283,10 @@
             </div>
         </section>
 
-        <!-- URUTAN DIPERBAIKI: Dokumentasi sekarang sebelum Anggaran -->
-        <!-- Bagian Dokumentasi -->
         <section id="dokumentasi" class="py-20 bg-slate-50 bg-pattern">
             <div class="container mx-auto px-6 relative">
-                <!-- Background Blob -->
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <div class="bg-blob w-[20rem] h-[20rem] md:w-[40rem] md:h-[40rem] bg-blue-200 rounded-full filter blur-3xl opacity-20"></div>
+                    <div class="bg-blob w-[40rem] h-[40rem] bg-blue-200 rounded-full filter blur-3xl opacity-20"></div>
                 </div>
                 <div class="text-center mb-12 fade-in-section">
                     <h2 class="section-title text-3xl sm:text-4xl font-extrabold text-gray-800">Dokumentasi Kegiatan</h2>
@@ -354,7 +338,6 @@
             </div>
         </section>
 
-        <!-- Bagian Anggaran Dana -->
         <section id="anggaran" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 fade-in-section">
@@ -364,7 +347,6 @@
                 </div>
 
                 <div class="grid lg:grid-cols-2 gap-12 fade-in-section">
-                    <!-- Tabel Pemasukan -->
                     <div>
                         <h3 class="text-2xl font-bold mb-4 text-center" style="color: var(--color-4);">Pemasukan</h3>
                         <div class="bg-white rounded-lg shadow-md overflow-hidden">
@@ -390,7 +372,6 @@
                         </div>
                     </div>
 
-                    <!-- Tabel Pengeluaran -->
                     <div>
                         <h3 class="text-2xl font-bold mb-4 text-center" style="color: var(--color-1);">Pengeluaran</h3>
                         <div class="bg-white rounded-lg shadow-md overflow-hidden">
@@ -420,7 +401,6 @@
             </div>
         </section>
 
-        <!-- BAGIAN BARU: Bukti Pendukung -->
         <section id="bukti-pendukung" class="py-20 bg-slate-50 bg-pattern">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 fade-in-section">
@@ -429,22 +409,19 @@
                     <div class="title-underline mt-4 h-1.5 mx-auto rounded-full" style="background-color: var(--accent);"></div>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Bukti Pembayaran -->
                     <div class="fade-in-section">
                         <figure class="gallery-figure">
                             <img src="img/bukti pembayaran.png" alt="Bukti Pembayaran" class="gallery-item h-full w-full cursor-pointer object-contain bg-white">
                             <figcaption class="gallery-caption font-semibold">Bukti Pembayaran</figcaption>
                         </figure>
                     </div>
-                     <!-- Jadwal Interview -->
-                    <div class="fade-in-section">
+                     <div class="fade-in-section">
                         <figure class="gallery-figure">
                             <img src="img/schedule interview.png" alt="Jadwal Interview" class="gallery-item h-full w-full cursor-pointer object-contain bg-white">
                             <figcaption class="gallery-caption font-semibold">Jadwal Interview</figcaption>
                         </figure>
                     </div>
-                     <!-- Artikel Berita -->
-                    <div class="fade-in-section">
+                     <div class="fade-in-section">
                         <a href="https://garutexpo.com/mahasiswa-stai-al-musaddadiyah-garut-siap-wujudkan-pembangunan-berkelanjutan-lewat-aksi-volunteer-di-lombok-tengah/" target="_blank" rel="noopener noreferrer">
                             <figure class="gallery-figure">
                                 <img src="img/artikel.png" alt="Artikel Berita" class="gallery-item h-full w-full cursor-pointer object-contain bg-white">
@@ -459,7 +436,6 @@
             </div>
         </section>
 
-        <!-- BAGIAN BARU: Penutup -->
         <section id="penutup" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 fade-in-section">
@@ -467,7 +443,6 @@
                     <div class="title-underline mt-4 h-1.5 mx-auto rounded-full" style="background-color: var(--accent);"></div>
                 </div>
                 <div class="grid md:grid-cols-2 gap-10 items-start">
-                    <!-- Kesimpulan -->
                     <div class="card-wrapper fade-in-section">
                         <div class="card bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200 transition-all duration-300 h-full">
                             <h3 class="text-2xl font-bold mb-4" style="color: var(--primary);">Kesimpulan</h3>
@@ -476,7 +451,6 @@
                             </p>
                         </div>
                     </div>
-                    <!-- Saran & Rekomendasi -->
                     <div class="card-wrapper fade-in-section">
                         <div class="card bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200 transition-all duration-300 h-full">
                             <h3 class="text-2xl font-bold mb-4" style="color: var(--primary);">Saran dan Rekomendasi</h3>
@@ -494,7 +468,6 @@
 
     </main>
 
-    <!-- Modal untuk Galeri -->
     <div id="gallery-modal" class="fixed inset-0 bg-black/80 z-[99] flex justify-center items-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
         <img id="modal-img" src="" alt="Gambar diperbesar" class="max-w-full max-h-full object-contain rounded-lg transition-transform duration-300">
         <button id="close-modal" class="absolute top-4 right-4 text-white bg-black/50 rounded-full p-2" aria-label="Tutup modal">
@@ -502,15 +475,12 @@
         </button>
     </div>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2025 Rien Diani. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- TAUTAN SCRIPT HARUS DITARUH SEBELUM PENUTUP BODY -->
     <script src="index.js" defer></script>
 </body>
 </html>
-
