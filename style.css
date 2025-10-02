@@ -13,7 +13,7 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: var(--c-bg);
     color: var(--c-text-dark);
-    /* PERBAIKAN UTAMA: Mencegah scroll horizontal pada mobile */
+    /* PERBAIKAN KRITIS: Mencegah scroll horizontal pada mobile */
     overflow-x: hidden; 
 }
 
@@ -330,7 +330,8 @@ table tfoot {
 @media (max-width: 480px) {
     /* Further reduce hero text size for very small screens */
     #hero h1 {
-        font-size: 2rem; /* 32px */
+        /* PERBAIKAN KRITIS: Menggunakan unit vw untuk penskalaan agresif di ponsel */
+        font-size: 7.5vw; 
     }
     #hero p {
         font-size: 1rem; /* 16px */
@@ -347,9 +348,4 @@ table tfoot {
     }
 }
 
-/* KODE BARU: Penyesuaian untuk layar yang sangat kecil (< 380px) */
-@media (max-width: 380px) {
-    #hero h1 {
-        font-size: 1.75rem; /* 28px */
-    }
-}
+/* Catatan: Media Query 380px sebelumnya dihapus karena penggunaan 7.5vw sudah mencakup layar yang sangat kecil. */
