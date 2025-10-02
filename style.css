@@ -272,3 +272,65 @@ table tfoot {
     pointer-events: none;
 }
 
+/* --- Media Queries for Responsiveness --- */
+
+@media (max-width: 767px) {
+    /* Adjust hero section text size */
+    #hero h1 {
+        font-size: 2.5rem; /* 40px */
+    }
+    #hero p {
+        font-size: 1.125rem; /* 18px */
+    }
+
+    /* Adjust section titles */
+    .section-title {
+        font-size: 1.875rem; /* 30px */
+    }
+
+    /* Adjust padding for sections */
+    section.py-20 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    /* Make tab buttons full width and vertical */
+    .flex-col.sm\:flex-row {
+        flex-direction: column;
+        border-radius: 0.75rem; /* rounded-lg */
+    }
+
+    .tab-btn {
+        width: 100%;
+        border-radius: 0.5rem; /* rounded-md */
+    }
+    
+    .sm\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 0.5rem;
+    }
+
+    /* Adjust grid in "Bukti Pendukung" to be single column */
+    #bukti-pendukung .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further reduce hero text size for very small screens */
+    #hero h1 {
+        font-size: 2rem; /* 32px */
+    }
+    #hero p {
+        font-size: 1rem; /* 16px */
+    }
+
+    /* Further reduce section title size */
+    .section-title {
+        font-size: 1.5rem; /* 24px */
+    }
+
+    /* Make "Undangan" and "Dokumentasi" grids single column */
+    #undangan .grid, #dokumentasi .grid {
+        grid-template-columns: 1fr;
+    }
+}
